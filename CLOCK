@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int hours, minutes, seconds;
+    hours = 0;
+    minutes = 0;
+    seconds = 0;
+    while (true) {
+        cout << hours << ":" << minutes << ":" << seconds << endl;
+        seconds++;
+        if (seconds == 60) {
+            minutes++;
+            seconds = 0;
+        }
+        if (minutes == 60) {
+            hours++;
+            minutes = 0;
+        }
+        if (hours == 24) {
+            hours = 0;
+        }
+        system("pause");
+    }
+    return 0;
+}
